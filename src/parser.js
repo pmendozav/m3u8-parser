@@ -715,7 +715,7 @@ export default class Parser extends Stream {
                   message: 'EXT-X-DATERANGE with an END-ON-NEXT=YES attribute must not contain DURATION or END-DATE attributes'
                 });
               }
-              if (dateRange.duration && dateRange.endDate) {
+              if (dateRange.duration && dateRange.startDate) {
                 const startDate = dateRange.startDate;
                 const newDateInSeconds = startDate.getTime() + (dateRange.duration * 1000);
 
